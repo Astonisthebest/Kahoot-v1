@@ -7,9 +7,8 @@ function getready() {
 window.addEventListener("gameblock",answer);
 function answer() {
     var correctBlocks = new Array();
-
-    kahoot.answers[kahoot.current_question].array.forEach(element => {
-        correctBlocks.push(document.querySelector("[data-functional-selector='answer-" + element + "']"));
+    kahoot.answers[kahoot.current_question].correct.foreach(arrayItem => {
+        correctBlocks.push(document.querySelector("[data-functional-selector='answer-" + arrayItem + "']"));
     });
     console.log(correctBlocks);
 }
