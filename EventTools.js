@@ -32,7 +32,7 @@
 
         var sub_url = url.slice(url.indexOf("kahoot.it/") + 10,url.length);
 
-        console.log("event : " + sub_url);
+        console.log("Event triggered : " + sub_url);
 
         window.dispatchEvent(new Event(sub_url));
 
