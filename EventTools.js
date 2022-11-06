@@ -32,6 +32,6 @@
 
         var sub_url = url.slice(url.indexOf("kahoot.it/") + 10,url.length);
 
-        window.dispatchEvent(sub_url);
+        window.dispatchEvent(new Event(sub_url));
 
     });
