@@ -6,5 +6,5 @@ function getready() {
 
 window.addEventListener("gameblock",answer);
 function answer() {
-    console.log(kahoot.answer[kahoot.current_question]);
+    console.log(kahoot.answers[kahoot.current_question]);
 }
