@@ -8,7 +8,7 @@
 
                 previousUrl = location.href;
 
-                window.dispatchEvent(new Event("urlchange"));
+                document.body.dispatchEvent(new Event("urlchange"));
 
             }
 
