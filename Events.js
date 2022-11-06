@@ -6,5 +6,9 @@ function getready() {
 
 window.addEventListener("gameblock",answer);
 function answer() {
-    console.log(kahoot.answers[kahoot.current_question][0]);
+    var correctBlocks = new Array();
+    kahoot.answers[kahoot.current_question].foreach(arrayItem => {
+        correctBlocks.push(document.querySelector("[data-functional-selector='answer-" + arrayItem + "']"));
+    });
+    console.log(correctBlocks);
 }
