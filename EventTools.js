@@ -71,7 +71,12 @@ window.addEventListener("urlchange", function() {
             }
             return data;
         } : false;
-        document.dispatchEvent(new CustomEvent(event),details);
-        console.log("event:" + event + "\ndata :",data)
+        window.dispatchEvent(new CustomEvent(event),details);
+        console.log("event:" + event + "\ndata :",data);
 });
 
+function keyup(evt) {
+    evt.key == "ArrowLeft" ? window.dispatchEvent(new Event("PreviousMode")) : evt.key == "ArrowUp" ? window.dispatchEvent(new Event("NextMode")) : 1;
+}
+
+window.addEventListener("keyup",keyup);
